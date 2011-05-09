@@ -73,7 +73,7 @@ describe UsersController do
         post :create, :user => @attr
         response.should render_template('new')
       end
-    end
+      end
 	
 	 describe "success" do
 
@@ -82,7 +82,7 @@ describe UsersController do
                   :password => "foobar", :password_confirmation => "foobar" }
       end
 	  
-	   it "should have a welcome message" do
+      it "should have a welcome message" do
         post :create, :user => @attr
         flash[:success].should =~ /welcome to the sample app/i
       end

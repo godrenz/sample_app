@@ -3,8 +3,10 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-	<%= render 'layouts/stylesheets' %>
-	</head>
+    <%= render 'layouts/stylesheets' %>
+  </head>
+  <body>
+    <div class="container">
       <%= render 'layouts/header' %>
       <section class="round">
         <% flash.each do |key, value| %>
@@ -12,8 +14,8 @@
         <% end %>
         <%= yield %>
       </section>
-	  <%= render 'layouts/footer' %>
-	  <%= debug(params) if Rails.env.development? %>
+     <%= render 'layouts/footer' %>
+     <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
