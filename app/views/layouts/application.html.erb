@@ -3,6 +3,8 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
+	<%= render 'layouts/stylesheets' %>
+	</head>
       <%= render 'layouts/header' %>
       <section class="round">
         <% flash.each do |key, value| %>
